@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class Pemilihan2Percobaan219 {
+public class modifikasiPercobaan2P5 {
+
     public static void main(String[] args) {
         Scanner absen19 = new Scanner(System.in);
         int menu, harga;
@@ -22,7 +23,7 @@ public class Pemilihan2Percobaan219 {
         System.out.println("Metode pembayaran (Langsung/QRIS) = ");
         metodePembayaran = absen19.nextLine();
         System.out.println("------------------------------------");
-            if (member.equalsIgnoreCase("y")) {
+            if (member.equals("y")) {
                 diskon = 0.10;
                 System.out.println("besar diskon = 10%.");
                 if (menu == 1) {
@@ -39,11 +40,11 @@ public class Pemilihan2Percobaan219 {
                 return;
             }
         total_bayar = harga - (harga * diskon);
-        if (metodePembayaran.equalsIgnoreCase("QRIS")) {
+        if (metodePembayaran.equals("QRIS")) {
             total_bayar -= 1000;
         }
         System.out.println("Total bayar setelah diskon = " + total_bayar); }
-        else if (member.equalsIgnoreCase("n")) {
+        else if (member.equals("n")) {
                 if (menu == 1) {
                     harga = 3000;
                     System.out.println("Harga Ricebowl = " + harga);
@@ -58,7 +59,7 @@ public class Pemilihan2Percobaan219 {
                     return;
                 }
 
-                if (metodePembayaran.equalsIgnoreCase("QRIS")) {
+                if (metodePembayaran.equals("QRIS")) {
                     harga -= 1000;
                 }
 
